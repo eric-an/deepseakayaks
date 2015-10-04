@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nameofapp</title>
+  <title> Eric's Electric Cars</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  
-  <!-- Bootstrap core JS -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-	<nav class="navbar navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <nav class="container-fluid">
 	    <nav class="navbar-header">
 	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -55,11 +51,28 @@
 
     <div class=islandpic><%= image_tag("landscape.jpg") %></div>
   </div><!-- /container-fluid -->
-
-<%= yield %>
-
+  
+  <!-- footer -->
   <footer>
   	<p>&copy; Eric An 2015</p>
   </footer>
+  
+  <!-- jQuery Script -->
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <!-- Bootstrap core JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <!-- Can place script tags with JavaScript files here -->
+  <script type= "text/javascript" src="js/scripts.js"></script>
+
+  <script src="js/jquery.media.js" type="text/javascript"></script>
+
+<%= yield %>
+
+
 </body>
 </html>
