@@ -2,18 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-table.productlist {
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-	
-	th {
-		height: 50px;
-		text-align: center;
-	}
+.row {
+	margin-left: .5em;
 
-	td {
-		text-align: center;
-		padding: 1em;
+	.truncate_url, .truncate_desc {
+		white-space: pre;           /* CSS 2.0 */
+		white-space: pre-wrap;      /* CSS 2.1 */
+		white-space: pre-line;      /* CSS 3.0 */
+		white-space: -pre-wrap;     /* Opera 4-6 */
+		white-space: -o-pre-wrap;   /* Opera 7 */
+		white-space: -moz-pre-wrap; /* Mozilla */
+		white-space: -hp-pre-wrap;  /* HP Printers */
+		word-wrap: break-word;      /* IE 5+ */
 	}
+}
+
+.container-fluid {
+	padding-left: 0px;
+	padding-right: 0px;
 }
