@@ -1,0 +1,10 @@
+<div class="row">
+        <div class="col-xs-2 col-s-4 col-md-2"><%= product.name %></div>
+        <div class="col-xs-2 col-s-4 col-md-2"><%= product.description %></div>
+        <div class="truncate_url col-xs-2 col-s-4 col-md-5"><%= product.image_url %></div>
+        <div class="col-xs-2 col-s-4 col-md-1"><%= product.colour %></div>
+        <div class="col-xs-2 col-s-4 col-md-1"><%= product.price %></div>
+        <div class="col-xs-2 col-s-4 col-md-1"><%= link_to 'Show', product %>
+        <%= link_to 'Edit', edit_product_path(product) %>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+</div><!-- /row -->

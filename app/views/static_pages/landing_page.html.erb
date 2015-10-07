@@ -1,2 +1,36 @@
 <h2>Featured Product:</h2>
-<h3><%= @featured_product.name %></h3>
+  <h3><%= @featured_product.name %></h3>
+    <h4>Product List:</h4>
+		  <%= render partial: 'productlist' %>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+  	<% @products.each do |product| %>
+    <li data-target="#carousel-example-generic" class="<%="active" if product == @products.first %>"></li>
+    <% end %>
+  </ol><!-- /carousel-indicators -->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+  	<% @products.each do |product| %>
+  	<div class="item <%= "active" if product == @products.first %>">
+  		<%= image_tag(product.image_url) %>
+  		<div class="carousel-caption">
+  		  <%= product.name %>
+  		</div><!-- /carousel-caption -->
+  	</div><!-- /item -->
+  	<% end %> 	
+  </div><!-- /carousel-inner -->
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+  	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	<span class="sr-only">Previous</span>
+  </a><!-- /left carousel-control -->
+
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+  	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+  	<span class="sr-only">Previous</span>
+  </a><!-- /right carousel-control -->
+</div><!-- /carousel-example-generic -->
