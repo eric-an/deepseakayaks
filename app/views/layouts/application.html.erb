@@ -25,20 +25,22 @@
 	      <ul class="nav navbar-nav">
 	        <li>
 	          <div class="portfolio">
-	            <a href="#">Electric Cars</a>
+	            <%= link_to "Electric Cars", static_pages_landing_page_path %>
 	          </div>
 	        </li>
 	      </ul>           
 	      <ul class="rightlinks nav navbar-nav">
-	        <li><a href="#about">About</a></li>
+	        <li><%= link_to "About", static_pages_about_path %></li>
 	        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Vehicles<span class="caret"></span></a>
 	          <ul class="dropdown-menu">
-	            <li><a href="#work">Vehicle 1</a></li>
-	            <li><a href="#work">Vehicle 2</a></li>
+	            <li><%= link_to "Electric Car 1", product_path(1) %></a></li>
+	            <li><%= link_to "Electric Car 2", product_path(2) %></a></li>
+	            <li><%= link_to "Electric Car 3", product_path(3) %></li>
+	            <li><%= link_to "Electric Car 4", product_path(4) %></li>
 	          </ul>
 	        </li>
-	        <li><a href="#contact">Contact</a></li>
-	        <li><a href="#FAQ">FAQ</a></li>
+	        <li><%= link_to "Place an Order", new_order_path %></a></li>
+	        <li><%= link_to "FAQ/Contact", static_pages_contact_path %></a></li>
 	      </ul><!-- /nav navbar-nav -->
 	    </nav><!-- /navbar-collapse collapse -->
 	  </nav><!-- /container-fluid -->
@@ -50,6 +52,22 @@
     <h2> Your source for electric cars on Easter Island</h2>
 
     <div class=islandpic><%= image_tag("landscape.jpg") %></div>
+    <div class="dynamic_links">
+	    <h4>Sample Dynamic Links</h4>
+		    <ul>
+			    <li><%= link_to "Homepage", static_pages_landing_page_path %></li>  	
+			    <li><%= link_to "About", static_pages_about_path %></li>
+			    <li><%= link_to "Contact", static_pages_contact_path %></li>
+			    <li><%= link_to "Make a New Product", new_product_path %></li>
+			    <li><%= link_to "Show All Products", products_path %>
+			    </li>
+			    <li><%= link_to "Make a New Order", new_order_path %></li>
+			    <li><%= link_to "Show All Orders", orders_path %>
+			    </li>			    
+			    <li><%= link_to "Root", root_path %></li>   
+			  </ul>
+	    <h4>/Sample Dynamic Links</h4>			  
+		</div><!-- /dynamic_links -->
   </div><!-- /container-fluid -->
   
   <!-- footer -->
