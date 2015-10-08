@@ -31,16 +31,25 @@
 	      </ul>           
 	      <ul class="rightlinks nav navbar-nav">
 	        <li><%= link_to "About", static_pages_about_path %></li>
-	        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Vehicles<span class="caret"></span></a>
+	        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Vehicles<span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 	            <li><%= link_to "Electric Car 1", product_path(1) %></a></li>
 	            <li><%= link_to "Electric Car 2", product_path(2) %></a></li>
 	            <li><%= link_to "Electric Car 3", product_path(3) %></li>
 	            <li><%= link_to "Electric Car 4", product_path(4) %></li>
-	          </ul>
-	        </li>
+	          </ul><!-- /dropdown-menu -->
+	        </li><!-- /dropdown -->
 	        <li><%= link_to "Place an Order", new_order_path %></a></li>
 	        <li><%= link_to "FAQ/Contact", static_pages_contact_path %></a></li>
+
+	        <div class="search_form">
+		        <%= form_tag("/products", method: "get") do %>
+		          <!--<%= label_tag(:q, "Search for") %> -->
+		          <%= text_field_tag(:q) %>
+		          <%= submit_tag("Search") %>
+		        <% end %><!-- form_tag -->
+		      </div><!-- /search_form -->
+
 	      </ul><!-- /nav navbar-nav -->
 	    </nav><!-- /navbar-collapse collapse -->
 	  </nav><!-- /container-fluid -->
