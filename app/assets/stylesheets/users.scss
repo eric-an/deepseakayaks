@@ -1,0 +1,31 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#new_user {
+	margin: 0 auto;
+	max-width: 300px;
+
+}
+
+#email_input_field {
+	margin-bottom: -19px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#user_email, #user_password, #user_password_confirmation {
+	padding: 10px;
+	font-size: 16px;
+	width: 300px;
+}
+
+#loginbutton {
+	max-width: 300px;
+	margin: 0;
+}
+
+#loginhelp {
+	max-width: 300px;
+	margin: 0 auto;
+}
