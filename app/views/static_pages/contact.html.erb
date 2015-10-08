@@ -1,2 +1,23 @@
-<h1>StaticPages#contact</h1>
-<p>McSweeney's organic tousled Banksy roof party. Blog twee post-ironic, bicycle rights flexitarian 90's farm-to-table narwhal Austin cray next level Intelligentsia +1 meggings readymade.</p>
+<h1>Contact Us</h1>
+
+<% flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you") do %>
+<div class="row">
+	<div class="col-md-4">
+		<div class="form-group">
+			<%= label_tag :name, "Name" %>
+			<%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+		</div><!-- /form-group -->
+		<div class="form-group">
+		  <%= label_tag :email, "Email Address" %>
+		  <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+		</div><!-- /form-group -->
+		<div class="form-group">
+			<%= label_tag :message, "Message" %>
+			<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+		</div><!-- /form-group -->
+	</div><!-- /col-md-4 -->
+</div><!-- /row -->
+<%= submit_tag "Send" %>
+<% end %>
