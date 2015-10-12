@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Eric's Electric Cars</title>
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -68,17 +68,22 @@
   <div class="container-fluid">
   <br>
   <br>
+  <br>
+  <% if notice %>
   <p class="notice"><%= notice %></p>
+  <% end %>
+  <% if alert %>
   <div class="alert alert-warning alert-dismissible" role="alert">
 	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   	  <%= alert %>
   </div><!-- /alert -->
+  <% end %>
 
     <h1>Welcome to Eric's Electric Cars</h1>
 
     <h2> Your source for electric cars on Easter Island</h2>
 
-    <div class=islandpic><%= image_tag("landscape.jpg") %></div>
+    <%= image_tag("landscape.jpg", :class => "img-responsive") %>
 
     <div class="dynamic_links">
 	    <h4>Sample Dynamic Links for Reference</h4>

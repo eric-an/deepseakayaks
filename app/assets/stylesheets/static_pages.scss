@@ -32,9 +32,11 @@ h4 {
 	padding-left: 5em;
 }
 
-.islandpic {
-	text-align: center;
-}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+ }
 
 /* Typography */
 h1, h2 {
