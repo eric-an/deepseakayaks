@@ -1,20 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-  <h1>Listing Products</h1>
-
   <div class ="container-fluid">
-    <div class="row">
-      <div class="col-xs-2 col-s-4 col-md-2">Name</div>
-      <div class="truncate_desc col-xs-2 col-s-4 col-md-2">Description</div>
-      <div class="truncate_url col-xs-2 col-s-4 col-md-5">Image URL</div>
-      <div class="col-xs-2 col-s-4 col-md-1">Colour</div>
-      <div class="col-xs-2 col-s-4 col-md-1">Price</div>
+    <p id="notice"><%= notice %></p>
+    <h1>Listing Products</h1>
+
+    <div class="row" id="product_listings">
+      <div class="col-xs-12 col-s-4 col-md-2">Name</div>
+      <div class="truncate_desc col-xs-12 col-s-4 col-md-2">Description</div>
+      <div class="truncate_url col-xs-12 col-s-4 col-md-2">Image URL</div>
+      <div class="col-xs-12 col-s-4 col-md-2">Colour</div>
+      <div class="col-xs-12 col-s-4 col-md-1">Price</div>
     </div><!-- /row -->
 
     <%= render @products %>
 
+    <br>
+    <%= link_to 'New Product', new_product_path %>
+
   </div> <!-- /container-fluid -->
-
-<br>
-
-<%= link_to 'New Product', new_product_path %>
