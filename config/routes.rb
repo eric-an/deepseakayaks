@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users, :path => ' ', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  
   get 'speakers/contact'
 
   get 'orders/new'
@@ -32,7 +34,6 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'products#index'
 
-  devise_for :users, :path => ' ', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
