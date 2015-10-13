@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users
+
   get 'speakers/contact'
 
   get 'orders/new'
@@ -10,15 +10,19 @@ Rails.application.routes.draw do
 
   get 'static_pages/landing_page'
 
-  resources :products
+  resources :users
+
+  resources :orders, only: [:index, :show, :new, :create]
+
+  resources :products do
+    resources :comments
+  end
 
   get 'static_pages/about'
 
   get 'static_pages/contact'
 
   get 'static_pages/index'
-
-  resources :orders, only: [:index, :show, :new, :create]
 
   post 'static_pages/thank_you' 
 
