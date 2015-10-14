@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
   def landing_page
   	@products = Product.limit(4)
   	@featured_product = Product.first
-  	@productlist = Product.find([1,2,3,4])
+  	@productlist = @products
   end
 
   def thank_you
