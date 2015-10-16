@@ -36,6 +36,8 @@ gem 'will_paginate'
 
 gem 'factory_girl_rails'
 
+gem 'stripe'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

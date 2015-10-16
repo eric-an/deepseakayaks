@@ -4,7 +4,7 @@
     <div class="col-xs-12 col-md-2"><%= product.description %></div>
     <div class="truncate_url col-xs-12 col-md-2"><%= product.image_url %></div>
     <div class="col-xs-12 col-md-2"><%= product.colour %></div>
-    <div class="col-xs-12 col-md-2"><%= product.price %></div>
+    <div class="col-xs-12 col-md-2">$<%= product.price %></div>
     <div class="col-xs-12 col-md-2"><%= link_to 'Show', product %>
     <%= link_to 'Edit', edit_product_path(product) %>
     <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div>
