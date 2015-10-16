@@ -17,7 +17,7 @@ describe Product do
   context "when the product does not have a name" do
     
     before do
-    	@product = FactoryGirl.build(:product, :name => " ")
+    	@product = FactoryGirl.build(:product, :name => "")
     end
 
     it "should return an invalid product entry" do
