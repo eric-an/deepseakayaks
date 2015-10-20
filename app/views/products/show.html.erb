@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-xs-12 col-md-4" id="thumbnails">
       <a href="#" class="thumbnail">
-        <%= image_tag(@product.image_url) %>
+        <%= image_tag(@product.image_url, class: "img-zoom", data_zoom_image: @product.image_url) %>
       </a>
     </div>
   </div><!-- /row -->
