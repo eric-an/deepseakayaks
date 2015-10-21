@@ -14,13 +14,13 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :orders, only: [:index, :show, :new, :create]
+  resources :payments
+
+  resources :orders, only: [:index, :show, :new, :create, :destroy]
 
   resources :products do
     resources :comments
   end
-
-  resources :payments
 
   get 'static_pages/about'
 
