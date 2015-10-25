@@ -2,17 +2,9 @@
     <p id="notice"><%= notice %></p>
     <h1>Listing Orders</h1>
 
-    <div class="row" id="product_listings">
-      <div class="col-xs-12 col-md-2">User Id</div>
-      <div class="truncate desc col-xs-12 col-md-2">Product ID</div>
-      <div class="truncate_url col-xs-12 col-md-2">Total</div>
-    </div><!-- /row -->
+    <input type="text" placeholder="Your name" ng-model="name">
+    {{name}}
 
-    <%= render @orders %>
-
-    <br>
-    <div class="col-xs-11 col-md-2">
-    <%= link_to 'New Order', new_order_path %>
-    </div>
+    {{ 42 / 6}}
 
   </div> <!-- /container-fluid -->
