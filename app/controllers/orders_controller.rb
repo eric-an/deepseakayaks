@@ -1,48 +1,40 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:show, :edit, :destroy]
+  respond_to :json, :html
   before_filter :authenticate_user!
-  
+  protect_from_forgery
+  skip_before_action :verify_authenticity_token, if: :json_request?
+
 	def index
-		@orders = Order.all
-	end
-
-	def show
-	end
-
-	def new
-	  @order = Order.new
-	end
-
-	def create
-		@order = Order.new(order_params)
-
-    respond_to do |format|
-      if @order.save
-        format.html { redirect_to orders_url, notice: 'Order was successfully created.' }
-        format.json { render :show, status: :created, location: @order }
-      else
-        format.html { render :new }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
-    end
-	end
-
-  def destroy
-	  @order.destroy
-	  respond_to do |format|
-	    format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
-	    format.json { head :no_content }
-    end
+    @orders = Order.all.to_json(:include => [{:product => {:only => :name}}, {:user => {:only => :email}}])
+    respond_with @orders
   end
 
-	  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_order
-      @order = Order.find(params[:id])  
+  def show
+    @order = Order.find(params[:id]).to_json(:include => [{:product => {:only => :name}}, {:user => {:only => :email}}])
+    respond_with @order
+  end
+
+  def new
+  end
+
+  def create
+    @order = Order.create(order_params)
+    respond_with @order
+  end
+
+  def destroy
+    respond_with Order.destroy(params[:id])
+  end
+
+  protected
+
+    def json_request?
+      request.format.json?
     end
 
-    def order_params
-      params.require(:order).permit(:user_id, :product_id, :total)
-    end
+  private
 
+  def order_params
+    params.require(:order).permit(:product_id, :user_id, :total)
+  end
 end

@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="shop">
 <head>
+	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <title> Eric's Electric Cars</title>
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 
   <!-- jQuery Script -->
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
   <!-- Bootstrap core JS -->
@@ -18,13 +15,15 @@
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
   <!-- Can place script tags with JavaScript files here -->
-
-
   
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body >
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <nav class="container-fluid">
 	    <nav class="navbar-header">
@@ -46,7 +45,6 @@
 	      <ul class="rightlinks nav navbar-nav">
 	        <li><%= link_to "About", static_pages_about_path %></li>
 	        <li><%= link_to "Vehicles", products_path %></a></li>
-	        <li><%= link_to "Place an Order", new_order_path %></a></li>
 	        <li><%= link_to "Contact", static_pages_contact_path %></a></li>
 
 	        <div class="search_form">
@@ -87,10 +85,8 @@
   </div><!-- /alert -->
   <% end %>
 
-{{ 42 / 6}}
-
     <h1>Welcome to Eric's Electric Cars</h1>
-
+    
     <h2> Your source for electric cars on Easter Island</h2>
 
     <%= image_tag("landscape.jpg", :class => "img-responsive", :id => "home_image") %>
@@ -105,7 +101,6 @@
 			    <li><%= link_to "Make a New Product", new_product_path %></li>
 			    <li><%= link_to "Show All Products", products_path %>
 			    </li>
-			    <li><%= link_to "Make a New Order", new_order_path %></li>
 			    <li><%= link_to "Show All Orders", orders_path %>
 			    </li>			    			    
 			    <li><%= link_to "Show All Users", users_path %></li>
