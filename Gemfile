@@ -38,6 +38,8 @@ gem 'stripe'
 gem 'angularjs-rails'
 
 gem 'jquery-turbolinks'
+
+gem 'dalli'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

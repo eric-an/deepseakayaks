@@ -10,8 +10,10 @@
       <div class="col-xs-12 col-md-2">Price</div>
     </div><!-- /row -->
 
+    <%= cache(cache_key_for_products) do %>
     <%= render @products %>
-
+    <% end %>
+    
     <br>
     <div class="col-xs-11 col-md-2">
     <%= link_to 'New Product', new_product_path %>
