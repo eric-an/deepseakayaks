@@ -33,6 +33,13 @@ h1 {
 
 
 /* Image Carousel */
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 450px; }
+
 .carousel-caption {
 	margin-bottom: 5%;
   font-family: 'Oxygen', sans-serif;
@@ -50,6 +57,12 @@ h1 {
 .carousel-control.left, .carousel-control.right {
 	background-color: transparent;
 	background-image: none;
+}
+
+@media only screen and (max-width: 768px) {
+.carousel-caption {
+  font-size: 200%; }
+
 }
 
 
