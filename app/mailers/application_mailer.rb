@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "Welcome@DeepSeaKayaks.com"
+  default from: "WelcomeEmail@DeepSeaKayaks.com"
   layout 'mailer'
 end

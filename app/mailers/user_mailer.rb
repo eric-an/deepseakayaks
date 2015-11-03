@@ -7,7 +7,7 @@ class UserMailer < ApplicationMailer
   	@email = email
   	mail(:from => email,
   				:to => 'erican@me.com',
-  				:subject => "A new message from #{name}.")
+  				:subject => "New message from #{name}.")
   end
 
   def welcome_email(user)
