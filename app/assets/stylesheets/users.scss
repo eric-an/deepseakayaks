@@ -88,32 +88,6 @@
 	max-width: 100%;
 }
 
-/* Welcome Email */
-#welcome_email {
-  text-align: center;
-
-  h1, p {
-		text-align: center;
-		margin-top: 2em;
-		margin-bottom: 2em;
-  }
-}
-
-#email_table {
-	display: inline-block;
-	margin-right: 5em;
-	margin-left: 5em;
-}
-
-#email_image {
-display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  opacity: .8;
-  margin-bottom: 1em;
-}
-
 
 /* Users Listing */
 #users_index h1 {
