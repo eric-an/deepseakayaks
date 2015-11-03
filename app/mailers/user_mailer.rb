@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default from: "Deep Sea Kayaks"
+  default from: "Welcome@DeepSeaKayaks.com"
 
   def contact_form(email, name, message)
   	@message = message
