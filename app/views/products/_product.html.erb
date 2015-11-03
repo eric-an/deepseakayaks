@@ -1,16 +1,19 @@
-<div class="container-fluid">
-  <div class="row" id="product_listings">
+<div class="container-fluid products_index">
+  <div class="row" id="product_list">
       <% cache(product) do %>
-        <div class="col-xs-12 col-md-2"><%= product.name %></div>
-        <div class="col-xs-12 col-md-2"><%= product.description %></div>
-        <div class="truncate_url col-xs-12 col-md-2"><%= product.image_url %></div> 
-        <div class="col-xs-12 col-md-2"><%= product.colour %></div>
-        <div class="col-xs-12 col-md-2">$<%= product.price %></div>
+        <div class="col-xs-12 col-s-3 col-md-2"><%= product.name %></div>
+        <div class="col-xs-12 col-s-3 col-md-2"><%= product.description %></div>
+        <div class="col-xs-12 col-s-3 col-md-2"><%= product.image_url %></div> 
+        <div class="col-xs-12 col-s-3 col-md-2"><%= product.colour %></div>
+        <div class="col-xs-12 col-s-3 col-md-2">$<%= product.price %></div>
       <% end %>  
 
-    <div class="col-xs-12 col-md-2">
-    <%= link_to 'Show', product %>
-    <%= link_to 'Edit', edit_product_path(product) %>
-    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+    <div class="col-xs-12 col-s-3 col-md-2">
+      <%= link_to 'Show', product %>
+      <% if signed_in? && current_user.admin? %>
+        ||<%= link_to 'Edit', edit_product_path(product) %>||
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>  
+    </div>
   </div><!-- /row -->
 </div><!-- /container-fluid -->

@@ -1,31 +1,126 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* User Management */
+.user_authentication {
+    background: url(paddles.png) no-repeat center center;
+  	background-size: contain;
+  	max-width: 100%;
 
-#new_user {
-	margin: 0 auto;
-	max-width: 300px;
+	h2 {
+		text-align: center;
+		margin-top: 2em;
+	}
 
-}
+	h4, h5 {
+		text-align: center;
+		margin-bottom: 1em;
+	}
 
-#email_input_field {
-	margin-bottom: -19px;
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
-}
-
-#user_email, #user_password, #user_password_confirmation {
+	#user_first_name, #user_last_name, #user_email, #user_password, #user_password_confirmation, #user_current_password {
 	padding: 10px;
 	font-size: 16px;
 	width: 300px;
-}
-
-#loginbutton {
-	max-width: 300px;
-	margin: 0;
-}
-
-#loginhelp {
-	max-width: 300px;
+  }
+  
+  #new_user {
 	margin: 0 auto;
+	max-width: 300px;
+  }
+
+  #edit_user {
+  	text-align: center;
+  }
+
+	.field_with_errors {
+	  padding: 2px;
+	  background-color: #C7B299;
+	  display: inline-block;
+	}
+
+	.cancel_user {
+		margin-left: 2em;
+	}
+}
+
+.user_login {
+  background: url(login.jpg) no-repeat center center;
+	background-size: contain;
+	max-width: 100%;
+
+	h2 {
+		text-align: center;
+		margin-top: 2em;
+		font-weight: 700;
+	}
+	
+	h6 {
+		text-align: center;
+	}
+
+  #new_user {
+	margin: 0 auto;
+	max-width: 300px;
+  }
+
+  #user_email, #user_password {
+	padding: 10px;
+	font-size: 16px;
+	width: 300px;
+  }
+
+	#loginbutton {
+		max-width: 300px;
+		margin: 0;
+	}
+
+	#loginhelp {
+		margin: 4em auto;
+
+		a {
+			font-size: 150%;
+			font-weight: 700;
+			color: #FFF;
+		}
+	}
+}
+
+#user_pw_auth {
+  background: url(pw_help.png) no-repeat center center;
+	background-size: cover;
+	max-width: 100%;
+}
+
+/* Welcome Email */
+#welcome_email {
+  text-align: center;
+
+  h1, p {
+		text-align: center;
+		margin-top: 2em;
+		margin-bottom: 2em;
+  }
+}
+
+#email_table {
+	display: inline-block;
+	margin-right: 5em;
+	margin-left: 5em;
+}
+
+#email_image {
+display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  opacity: .8;
+  margin-bottom: 1em;
+}
+
+
+/* Users Listing */
+#users_index h1 {
+  margin-bottom: 2em;
+}
+
+.users_list h4, p {
+	text-align: center;
+	margin: .5em;
 }

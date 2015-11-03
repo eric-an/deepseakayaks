@@ -1,55 +1,58 @@
-<p id="notice"><%= notice %></p>
-
 <div class="container-fluid" id="show_product">
   <div class="row">
+
     <div class="col-xs-12 col-md-4" id="thumbnails">
       <a href="#" class="thumbnail">
         <%= image_tag(@product.image_url, class: "img-zoom", data_zoom_image: @product.image_url) %>
       </a>
-    </div>
+      <p>Roll over image to zoom</p>
+      <% if signed_in? && current_user.admin? %>
+        <p><%= link_to 'Edit Product', edit_product_path(@product) %> | <%= link_to 'Back', products_path %></p>
+      <% end %>
+    </div><!-- /col -->
+
+    <div class="col-xs-12 col-md-4" >
+      <h6>
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </h6>
+
+      <h6>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </h6>
+
+      <h6>
+        <strong>Image url:</strong>
+        <%= @product.image_url %>
+      </h6>
+
+      <h6>
+        <strong>Color:</strong>
+        <%= @product.colour %>
+      </h6>
+
+      <h6>
+        <strong>Price:</strong>
+        $<%= @product.price %>
+      </h6>
+
+      <h6>Average Rating:</h6><div class="rated" data-score="<%= @product.average_rating %>"></div>
+
+      <%= form_tag "/payments/create" do %>
+      <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %>
+    </div><!-- /col -->
+
+    <div class="col-xs-12 col-md-4">
+      <%= render 'new_comment' %>
+    </div><!-- /col -->
+
   </div><!-- /row -->
 
-    <p>
-      <strong>Name:</strong>
-      <%= @product.name %>
-    </p>
+  <hr>
 
-    <p>
-      <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
-
-    <p>
-      <strong>Image url:</strong>
-      <%= @product.image_url %>
-    </p>
-
-    <p>
-      <strong>Colour:</strong>
-      <%= @product.colour %>
-    </p>
-
-    <p>
-      <strong>Price:</strong>
-      $<%= @product.price %>
-    </p>
-
-    <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
-
-    <%= render 'new_comment' %>
-
-    <%= render 'comments' %>
+  <%= render 'comments' %>
 
   <%= will_paginate @comments %>
-
-  <%= form_tag "/payments/create" do %>
-    <%= render partial: "shared/stripe_checkout_button" %>
-  <% end %>
 </div><!-- /container -->
-
-
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
-
-

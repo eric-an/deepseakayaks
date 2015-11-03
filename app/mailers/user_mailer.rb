@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  default from: "from@example.com"
+  default from: "Deep Sea Kayaks"
 
   def contact_form(email, name, message)
   	@message = message
@@ -13,6 +13,6 @@ class UserMailer < ApplicationMailer
   def welcome_email(user)
   	@user = user
   	mail(:to => user.email, 
-  		    :subject => "Welcome to My Awesome Site")
+  		    :subject => "Welcome to Deep Sea Kayaks!")
   end
 end

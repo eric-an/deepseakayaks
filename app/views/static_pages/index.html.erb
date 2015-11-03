@@ -1,2 +1,11 @@
-<h1>Welcome</h1>
-<p>Welcome! The date and time is <%= Time.now %>. cho Park paleo messenger bag, vinyl banjo Austin squid asymmetrical scenester readymade. Selvage slow-carb DIY American Apparel kogi Kickstarter.</p>
+<div class="container-fluid" id="home_layout">
+ <%= image_tag("header_bg.png", :id => "home_image") %>
+</div>
+
+<div class="search_form">
+  <%= form_tag("/products", method: "get") do %>
+    <!--<%= label_tag(:q, "Search for") %> -->
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search Products") %>
+  <% end %><!-- form_tag -->
+</div><!-- /search_form -->

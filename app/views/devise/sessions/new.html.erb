@@ -1,4 +1,4 @@
-<div class="container log_in">
+<div class="container-fluid user_login">
   <h2>Log in</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -24,7 +24,7 @@
     </div>
   <% end %>
 
-  <p id="loginhelp"><%= render "devise/shared/links" %></p>
-</div><!-- /container --> 
+  <h6 id="loginhelp"><%= render "devise/shared/links" %></h6>
+</div><!-- /container-fluid --> 
 
 

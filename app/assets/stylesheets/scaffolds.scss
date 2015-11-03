@@ -1,13 +1,23 @@
 body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  position: relative;
+  font-size: 100%; 
+  background-color: #998675;
+  color: #534741;
+  font-family:'Oxygen', sans-serif;
   line-height: 18px;
 }
 
+.row {
+  margin-right: 0;
+  margin-left: 0; }
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Oxygen', sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -18,16 +28,73 @@ pre {
   font-size: 11px;
 }
 
+
+/* Navigation Bar */
+.navbar {
+  margin-top: 1.5em;
+  margin-bottom: 1px;
+
+  .navbar-nav {
+    li > a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .nav > li > a {
+    display: inline;
+  }
+
+  .left_links {
+    float: left;
+    margin-top: .5em;
+    
+    li {
+      color: #998675;
+      margin-top: .7em;
+      
+      a:hover {
+        color:#C7B299;
+      }
+    }
+
+    #edit_user_info {
+      margin-top: .7em;
+    }
+  }
+
+  .right_links {
+    float: right;
+    margin-top: 1.2em;
+    }
+  
+  a {
+    color: #C7B299;
+    font-size: 100%;
+  }
+
+  .navbar-toggle {
+    background-color: #736357;
+    color: #FFF;
+
+    .icon-bar{
+      color: #FFF;
+    }
+  }
+}
+
+
+/* Links */
 a {
-  color: #000;
+  color: #C7B299;
 
   &:visited {
-    color: #666;
+    color: #C7B299;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #C7B299;
+    background-color: transparent;
   }
 }
 
@@ -37,23 +104,32 @@ div {
   }
 }
 
+
+/* Footer */
+.admin_footer p {
+  text-align: left;
+  font-size: 90%;
+}
+
+
+/* Notice and Error Messages */
 #notice {
-  color: green;
+  color: #736357;
 }
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  background-color: #C7B299;
   display: table;
 }
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
+  border: 2px solid #C7B299;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: #C7B299;
 
   h2 {
     text-align: left;
@@ -62,8 +138,8 @@ div {
     font-size: 12px;
     margin: -7px;
     margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff;
+    background-color: #C7B299;
+    color: #534741;
   }
 
   ul li {

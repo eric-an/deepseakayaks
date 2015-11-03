@@ -1,3 +1,16 @@
-// Place all the styles related to the payments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Payment Confirmation */
+h3, h5 {
+	text-align: center;
+	margin-bottom: 1em;
+  font-family:'Oxygen', sans-serif;		
+	}
+
+#payment_image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  opacity: .8;
+  margin-top: 5em;
+  margin-bottom: 2em;
+}

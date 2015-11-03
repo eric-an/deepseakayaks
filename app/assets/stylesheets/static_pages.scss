@@ -1,129 +1,93 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-/* General Display/Positioning */
-body {
-	margin-bottom: 3em;
-	margin-right: 0;
-}
-
-.container-fluid {
-	padding-left: 0px;
-	padding-right: 0px;
-}
-
+/* Typography */
 h1 {
-	padding-top: 1.8em;
-	padding-bottom: 1em;
-}
-
-h3 {
 	text-align: center;
-	padding-bottom: .5em;
-	margin-top: -.3em;
+	font-family: 'Oxygen', sans-serif;
+	color: #534741;
 }
 
-h4 {
-	margin-left: 2em;
-}
 
-#product_list {
-	padding-left: 5em;
-}
-
-.img-responsive {
+/* Images */
+#home_image, #about_image, #contact_image {
   display: block;
   max-width: 100%;
   height: auto;
   margin: 0 auto;
- }
+  opacity: .8;
+  margin-bottom: 2em;
+}
 
- #show_product {
-  text-align: center;
- }
-
-#thumbnails {
-  float: none !important;
-  display: inline-block;
+#about_image {
+  margin-top: 2em;
 }
 
 
-/* Typography */
-h1, h2 {
+/* Search Form */
+.search_form {
 	text-align: center;
-	font-family: Palatino, Rockwell Extra Bold, serif;
-	color: #534741;
 }
+
+/* Contact Form */
+#contact_form h1 {
+  margin-bottom: 2em;
+}
+
 
 /* Image Carousel */
-.carousel-indicators {
-	margin-bottom: 17%;
-}
-
 .carousel-caption {
-	font-size: 2em;
-	margin-bottom: 19%;
-}
+	margin-bottom: 5%;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 550%;
+  font-weight: 700;
+  
+  h5 {
+    margin-bottom: 10%;
+  }
+
+  a:hover {
+  	text-decoration: none; }
+  }
 
 .carousel-control.left, .carousel-control.right {
 	background-color: transparent;
 	background-image: none;
 }
 
-/* Navigation Bar */
-body {
-	position: relative;
+
+/* FAQ Accordion */
+.panel-group {
+  margin-top: 6%; 
+}   
+
+.panel {
+  border: 0px;
+  background-color: #FFF;
+  margin-left: 15%;
+  margin-right: 15%; 
+} 
+
+.panel-default > .panel-heading {
+  background-color: #FFF;
+  margin-bottom: 3%; 
+} 
+
+.panel-title {
+  font-size: 1.6em;
+  color: #000 
+}  
+
+.panel-body {
+  padding-left: 8%;
+  padding-right: 11%;
+  background-color: #FFF;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 1.4em; 
 }
 
-.nav a {
-	text-transform: uppercase;
-	letter-spacing: .05em;
-	transition: color 600ms;
-}
-
-.portfolio {
-  text-transform: uppercase;
-  font-size: 15px;
-  padding: 13px;
-}
-
-.portfolio a {
-  color: #FFF;
-  padding: 15px;
-}
-
-.portfolio a:hover {
-  text-decoration: none;
-}
-
-.rightlinks {
-	float: right;
-}
-
-.search_form {
-	float: right;
-	margin-top: 1.2em;
-	margin-right: .5em;
-}
-
-.pull-right {
-	margin-top: .45em;
-	margin-right: .5em;
-	
-	a {
-	  color: #FFF;
-	}
-}
-
-/* Footer */
-footer {
-	position: fixed;
-	left: 0px;
-	bottom: 0px;
-	height: 25px;
-	width: 100%;
-	background-color: #837E7C;
-	line-height: 25px;
-	z-index: 1;
-}
+.panel-default > .panel-heading a:link {
+  text-decoration: none; }
+.panel-default > .panel-heading a:visited {
+  text-decoration: none; }
+.panel-default > .panel-heading a:hover {
+  text-decoration: none; }
+.panel-default > .panel-heading a:active {
+  text-decoration: none; }

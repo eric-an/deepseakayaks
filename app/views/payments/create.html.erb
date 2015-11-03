@@ -1,3 +1,9 @@
-<p>Thank you for your order.</p>
+<div class="container-fluid">
 
-<p>You bought a <%= @product.name %> for $<%= @product.price %>.</p>
+<%= image_tag("payment.jpg", :id => "payment_image") %>
+
+<h3>Thank you for your order.</h3>
+
+<h5>You bought a <%= @product.name %> for $<%= @product.price %>.</h5>
+
+</div><!-- /container-fluid -->

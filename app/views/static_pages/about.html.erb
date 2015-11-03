@@ -1,2 +1,47 @@
-<h1>StaticPages#about</h1>
-<p>cho Park paleo messenger bag, vinyl banjo Austin squid asymmetrical scenester readymade. Selvage slow-carb DIY American Apparel kogi Kickstarter. </p>
+<div class="container-fluid" id="about_layout">
+  
+  <%= image_tag("kayak_set.png", :id => "about_image") %>
+  <h1>Deep Sea Kayaks</h1>
+
+  <!-- Accordion -->
+     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><span class="glyphicon glyphicon-screenshot" style="margin-right: 1em"></span>How did Deep Sea Kayaks start?</a>
+            </h4><!-- /panel-title -->
+          </div><!-- /panel-heading -->
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              It initially started in the basement of a beach house.
+            </div><!-- /panel-body -->
+          </div><!-- /collapseOne -->
+        </div><!-- /panel -->
+
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span class="glyphicon glyphicon-screenshot" style="margin-right: 1em"></span>What makes your kayaks better than others? </a>
+            </h4><!-- /panel-title -->
+          </div><!-- /panel-heading -->
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+              They have glass bottoms and are very light-weight. Also, they are ideal for ocean kayaking.
+            </div><!-- /panel-body -->
+          </div><!-- /collapseTwo -->
+        </div><!-- /panel -->
+
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span class="glyphicon glyphicon-screenshot" style="margin-right: 1em"></span>Do you ship internationally?</a>
+            </h4><!-- /panel-title -->
+          </div><!-- /panel-heading -->
+          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+               Not currently at this time. <%= link_to "Please inquire for more information.", static_pages_contact_path %> 
+            </div><!-- /panel-body -->
+          </div><!-- /collapseThree -->
+        </div><!-- /panel -->
+      </div><!-- /panel-group -->
+</div><!-- /container-fluid -->

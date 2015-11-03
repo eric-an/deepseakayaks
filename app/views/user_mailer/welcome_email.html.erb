@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-    <h1>Welcome to example.com. </h1>
-    <p>
-      You have successfully signed up to example.com,
-      your username is: <%= @user.email %>.<br>
-    </p>
-    <p>Thanks for joining and have a great day!</p>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+</head>
+
+<body>
+  <div class="container-fluid" id="welcome_email">
+    <h1>Welcome to Deep Sea Kayaks. </h1>
+
+    <%= image_tag("welcome_email.png", :id => "email_image") %>
+
+    <table id="email_table">
+      <tbody>
+        <tr>
+          <td><p>You have successfully signed up to Deep Sea Kayaks, your username is: <%= @user.email %>./p>
+          <p>Thanks for joining and have a great day!</p></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>2015 Deep Sea Kayaks. You're receiving this email because you created an account.</p>
+  </div>
+
+
   </body>
 </html>
