@@ -1,5 +1,6 @@
-<%= hidden_field_tag "product_id", @product.id %>
-<%= hidden_field_tag "product", @product %>
+<form action="" method="POST">
+  <%= hidden_field_tag(:product_id, @product.id) %>
+
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
@@ -9,3 +10,5 @@
     data-image= <%= @product.image_url %>
     data-locale="auto">
   </script>
+
+  </form>

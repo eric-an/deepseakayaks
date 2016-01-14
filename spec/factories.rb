@@ -1,6 +1,8 @@
-FactoryGirl.define do  factory :payment do
+FactoryGirl.define do  
+
+	factory :payment do
     user nil
-product nil
+    product nil
   end
 
 	factory :product do
